@@ -1,6 +1,7 @@
 <?php
     require '../vendor/autoload.php';
     include 'dico.php';
+    include 'conjugation.php';
     $router = new AltoRouter();
 
     $router->map('GET','/Dico/',function(){
@@ -14,6 +15,14 @@
             $voice = read($value);
         }
         require 'views/dictionnary.php';
+    });
+    $router->map('GET','/Dico/conjugate',function(){
+        $value = '';
+        if (!empty($_GET['verb'])) {
+            $results = conjugate(strtolower($_GET['verb']));
+            $value = strtolower($_GET['verb']);
+        }
+        require 'views/conjugate.php';
     });
 
     $match = $router->match();
