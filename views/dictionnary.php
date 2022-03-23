@@ -17,6 +17,7 @@
             width: 100%;
             min-height: 100vh;
             background-color: #9ec7f0;
+            position: relative;
         }
 
         .container{
@@ -31,6 +32,8 @@
             padding: 5px;
             background-color: #59acff;
             color: white;
+            position: relative;
+            padding-bottom: 20px;
         }
 
         form{
@@ -278,7 +281,10 @@
         <?php else:?>
                 <h3>Welcome</h3>
         <?php endif;?>
-
+        
+        <div style="width: 100;text-align:center;position:absolute;bottom:0px;">
+            <span style="color:#fff;text-shadow:0px 2px #aaa;">&copy;2022 - projet_NAN_5.22 - BFabien99</span>
+        </div>
     </div>
 </body>
 <script>

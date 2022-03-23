@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,400&family=Roboto+Serif:ital,wght@0,100;0,300;0,400;0,500;1,100;1,200&family=Titillium+Web:ital,wght@0,200;0,400;1,200;1,300&display=swap');
@@ -17,6 +18,7 @@
             width: 100%;
             min-height: 100vh;
             background-color: #b3aefc;
+            font-family: Poppins,Montserrat,serif;
         }
 
         .container{
@@ -76,6 +78,7 @@
             align-items: center;
             text-align: center;
            background-color: #9e97fc;
+           box-shadow: 0px 5px 5px #9d97f7;
         }
         .forms h2{
             padding: 20px;
@@ -97,6 +100,7 @@
             align-items: center;
             text-align: center;
             background-color: #fff;
+            box-shadow: 0px 15px 10px #9d97f7;
         }
         .conjugatetable .temps{
             padding: 20px;
@@ -119,7 +123,74 @@
         }
 
         .conjugation .verb{
+            color: #837af5;
+            font-size: 1.4rem;
+            text-shadow: 0px 0px 1px #bbb;
+        }
 
+        @media screen and (max-width:1400px) {
+            .container{
+                width: 90%;
+                min-width: 100px;
+            }
+
+            .conjugationtable{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media screen and (max-width:750px) {
+            .container{
+                width: 100%;
+                min-width: 100px;
+            }
+
+            form{
+                justify-content: space-around;
+            }
+
+            form input[type="search"]{
+                width: 60%;
+                min-width: 250px;
+            }
+
+            form input[type="submit"]{
+                width: 20%;
+                min-width: 150px;
+            }
+
+            .conjugationtable{
+                display: flex;
+                flex-direction: column;
+                gap: 0.1em;
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            .conjugateform{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                gap: 2em;
+            }
+
+            form{
+                width: 100%;
+                justify-content: center;
+            }
+
+            form input[type="search"]{
+                width: 60%;
+                min-width: 10px;
+            }
+
+            form input[type="submit"]{
+                width: 20%;
+                min-width: 10px;
+            }
+            
         }
 
     </style>
@@ -153,7 +224,7 @@
 
                         <?php foreach ($conjugation_tables as $conjugation):?>
                             <!-- Box contenant la conjuguaison   -->
-                            <div class="conjugatetable">
+                            <div class="conjugatetable" data-aos="fade-up">
                             <h2 class="temps"><?= $conjugation['heading'] ?></h2>
                             <?php foreach ($conjugation['forms'] as $tense):?>
                                 <div class="conjugation">
@@ -176,5 +247,12 @@
                     <h3>Welcome</h3>
         <?php endif;?>
     </div>
+    <footer style="width: 100;text-align:center;">
+        <span style="color:#fff;text-shadow:0px 2px #aaa;">&copy;2022 - projet_NAN_5.22 - BFabien99</span>
+    </footer>
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </html>
