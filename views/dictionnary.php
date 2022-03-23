@@ -44,7 +44,7 @@
         }
 
         form input{
-            height: 30px;
+            height: 40px;
             outline: none;
             border: none;
         }
