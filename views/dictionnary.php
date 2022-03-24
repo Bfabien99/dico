@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
+    <title>Dictionnary</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,400&family=Roboto+Serif:ital,wght@0,100;0,300;0,400;0,500;1,100;1,200&family=Titillium+Web:ital,wght@0,200;0,400;1,200;1,300&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body{
             width: 100%;
             min-height: 100vh;
-            background-color: #9ec7f0;
-            position: relative;
+            background-color: #59acff;
+            font-family: Poppins;
         }
 
         .container{
             width: 90%;
             min-width: 710px;
-            min-height: 100vh;
+            min-height: 95vh;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -32,7 +27,6 @@
             padding: 5px;
             background-color: #59acff;
             color: white;
-            position: relative;
             padding-bottom: 20px;
         }
 
@@ -126,6 +120,11 @@
             width: fit-content;
             padding: 5px;
             margin: 10px 0;
+            text-transform: lowercase;
+        }
+
+        .example::first-letter{
+            text-transform: uppercase;
         }
 
         .illustration{
@@ -157,6 +156,16 @@
             text-decoration: underline;
         }
 
+        footer{
+            padding: 10px;
+            width: 100%;
+            margin:auto;
+            text-align: center;
+            color: white;
+            text-shadow: 0px 0px 2px #aaa;
+            background-color: #59acff;
+        }
+
         @media screen and (max-width:750px) {
             .container{
                 width: 100%;
@@ -181,9 +190,33 @@
                 width: 90%;
             }
         }
+
+        @media screen and (max-width:600px) {
+            .container{
+                width: 100%;
+                min-width: 100px;
+            }
+
+            form{
+                width: 90%;
+                justify-content: space-around;
+            }
+
+            form input[type="search"]{
+                width: 60%;
+                min-width: 10px;
+            }
+
+            form input[type="submit"]{
+                width: 20%;
+                min-width: 10px;
+            }
+
+        }
     </style>
 </head>
 <body>
+    <?php include 'layout/header.php';?>
     <div class="container">
 
         <form action="dictionnary" method="get">
@@ -281,16 +314,21 @@
         <?php else:?>
                 <h3>Welcome</h3>
         <?php endif;?>
-        
-        <div style="width: 100;text-align:center;position:absolute;bottom:0px;">
-            <span style="color:#fff;text-shadow:0px 2px #aaa;">&copy;2022 - projet_NAN_5.22 - BFabien99</span>
-        </div>
     </div>
+
+    <footer>
+        <span>&copy;2022 - projet_NAN_5.22 - BFabien99</span>
+    </footer>
 </body>
 <script>
-      function play() {
+    const defile = document.querySelector('.defile');
+    window.addEventListener('scroll',function(){
+        defile.classList.toggle('show',window.scrollY>=1000);
+    });
+
+    function play() {
         var audio = document.getElementById("audio");
         audio.play();
       }
-    </script>
+</script>
 </html>

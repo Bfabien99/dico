@@ -1,28 +1,61 @@
 <?php
+
+use Symfony\Component\VarDumper\Server\DumpServer;
+
     require '../vendor/autoload.php';
-    include 'dico.php';
-    include 'conjugation.php';
+    require 'models/classes.php';
+    include 'functions/dico.php';
+    include 'functions/conjugation.php';
+    include 'functions/cleans.php';
+    include 'functions/urldecoder.php';
     $router = new AltoRouter();
 
     $router->map('GET','/Dico/',function(){
-        require 'views/dictionnary.php';
+        require 'views/home.php';
     });
+
+    //Dictionnaire en GET
     $router->map('GET','/Dico/dictionnary',function(){
         $value = '';
         if (!empty($_GET['search'])) {
+            $_GET['search'] = cleans($_GET['search']);
             $results = search(strtolower($_GET['search']));
             $value = strtolower($_GET['search']);
             $voice = read($value);
         }
         require 'views/dictionnary.php';
     });
+
+    //Conjuguaison en GET
     $router->map('GET','/Dico/conjugate',function(){
         $value = '';
         if (!empty($_GET['verb'])) {
+            $_GET['verb'] = cleans($_GET['verb']);
             $results = conjugate(strtolower($_GET['verb']));
             $value = strtolower($_GET['verb']);
         }
         require 'views/conjugate.php';
+    });
+
+    //Liste des cours par theme en GET
+    $router->map('GET','/Dico/classes/',function(){
+        require 'views/classes.php';
+    });
+
+    //Titre des cours par theme GET
+    $router->map('GET','/Dico/classes/[*:theme]/',function($theme){
+        $init = new classes();
+        $titres = $init->getAllClasse($theme);
+        require 'views/theme.php';
+    });
+
+    //Cours par titre GET
+    $router->map('GET','/Dico/classes/[*:theme]/[*:titre]',function($theme,$titre){
+        $titre = urldecoder($titre);
+        $titre = str_replace("-", " ", $titre);
+        $init = new classes();
+        $cours = $init->getClasse($theme,$titre);
+        require 'views/cours.php';
     });
 
     $match = $router->match();
@@ -33,7 +66,6 @@
     } 
     else 
     {
-	// no route was matched
 	    require 'views/error/404.php';
         die();
     }

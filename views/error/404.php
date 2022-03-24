@@ -30,7 +30,7 @@
 </head>
 <body>
     <div class="errorbox">
-        <h1 class="error"><img src="assets/images/icones/icons8-warning-64.png" alt="warning">404</h1>
+        <h1 class="error"><img src="/Dico/assets/images/icones/icons8-warning-64.png" alt="warning">404</h1>
         <p>Sorry... Page not found</p>
     </div>
 </body>

@@ -5,15 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Conjugate</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,400&family=Roboto+Serif:ital,wght@0,100;0,300;0,400;0,500;1,100;1,200&family=Titillium+Web:ital,wght@0,200;0,400;1,200;1,300&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body{
             width: 100%;
             min-height: 100vh;
@@ -28,7 +23,9 @@
             flex-direction: column;
             gap: 3.5em;
             align-items: center;
+            padding: 5px;
             padding-bottom: 5px;
+            min-height: 95vh;
         }
 
         form{
@@ -128,6 +125,14 @@
             text-shadow: 0px 0px 1px #bbb;
         }
 
+        footer{
+            width: 90%;
+            margin:0 auto;
+            text-align: center;
+            color: white;
+            text-shadow: 0px 0px 2px #aaa;
+        }
+
         @media screen and (max-width:1400px) {
             .container{
                 width: 90%;
@@ -193,9 +198,33 @@
             
         }
 
+        @media screen and (max-width:600px) {
+            .container{
+                width: 100%;
+                min-width: 100px;
+            }
+
+            form{
+                width: 90%;
+                justify-content: space-around;
+            }
+
+            form input[type="search"]{
+                width: 60%;
+                min-width: 10px;
+            }
+
+            form input[type="submit"]{
+                width: 20%;
+                min-width: 10px;
+            }
+
+        }
+
     </style>
 </head>
 <body>
+    <?php include 'layout/header.php';?>
     <div class="container">
         <form action="" autocomplete="off">
             <input type="search" name="verb" value="<?= $value ?>" placeholder="search a verb">
@@ -247,12 +276,17 @@
                     <h3>Welcome</h3>
         <?php endif;?>
     </div>
-    <footer style="width: 100;text-align:center;">
-        <span style="color:#fff;text-shadow:0px 2px #aaa;">&copy;2022 - projet_NAN_5.22 - BFabien99</span>
+
+    <footer>
+        <span>&copy;2022 - projet_NAN_5.22 - BFabien99</span>
     </footer>
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+    AOS.init();
+    const defile = document.querySelector('.defile');
+    window.addEventListener('scroll',function(){
+        defile.classList.toggle('show',window.scrollY>=2500);
+    });
 </script>
 </html>
