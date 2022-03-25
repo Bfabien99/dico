@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
-    <title>Home</title>
+    <title>Contact Us</title>
     <style>
         body{
             width: 100%;
@@ -122,9 +122,4 @@
         <span>&copy;2022 - projet_NAN_5.22 - BFabien99</span>
     </footer>
 </body>
-<script>
-    setInterval(function(){
-        window.location.reload();
-    },2000)
-</script>
 </html>
