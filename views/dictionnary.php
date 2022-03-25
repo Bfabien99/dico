@@ -11,21 +11,21 @@
         body{
             width: 100%;
             min-height: 100vh;
-            background-color: #59acff;
+            background-color:  #b3aefc;
             font-family: Poppins;
         }
 
         .container{
             width: 90%;
-            min-width: 710px;
+            min-width: 310px;
             min-height: 95vh;
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1em;
+            gap: 2em;
             padding: 5px;
-            background-color: #59acff;
+            background-color:  #b3aefc;
             color: white;
             padding-bottom: 20px;
         }
@@ -163,7 +163,7 @@
             text-align: center;
             color: white;
             text-shadow: 0px 0px 2px #aaa;
-            background-color: #59acff;
+            background-color: #b3aefc;
         }
 
         @media screen and (max-width:750px) {

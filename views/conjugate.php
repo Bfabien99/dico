@@ -21,7 +21,7 @@
             margin: auto;
             display: flex;
             flex-direction: column;
-            gap: 3.5em;
+            gap: 2em;
             align-items: center;
             padding: 5px;
             padding-bottom: 5px;
@@ -271,9 +271,9 @@
             <!-- fin Box contenant le verbe conjugué  -->
 
         <?php elseif(!empty($_GET['verb']) && empty($results['conjugated_forms'])):?>
-                <h3>No match found</h3>
+                <h3 style="color: white;">No match found</h3>
         <?php else:?>
-                    <h3>Welcome</h3>
+                    <h3 style="color: white;">Welcome</h3>
         <?php endif;?>
     </div>
 

@@ -15,6 +15,7 @@
         /* position: sticky;
         top: 0; */
         z-index: 1000;
+        font-family: Poppins !important;
     }
 
     .center{
@@ -64,18 +65,22 @@
         background-color: #3e91e3;
     }
 
-    .navigation li.conjugate:active{
+    .navigation li.conjugate:active, .navigation li.dictionnary:active{
         background-color: #b3aefc;
+    }
+
+    .navigation li.contact:active{
+        background-color: #222222;
     }
 
     .defile{
         z-index: 500;
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
         border: 3px solid #444;
         background-color: rgb(236, 236, 90);
         position: fixed;
-        padding: 30px;
+        padding: 20px;
         border-radius: 50%;
         display: none;
         opacity: 0.3;
@@ -84,6 +89,7 @@
         font-weight: bolder;
         color: white;
         font-size: 3rem;
+        right: 05%;
     }
 
     .anim:hover{

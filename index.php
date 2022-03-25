@@ -42,6 +42,11 @@ use Symfony\Component\VarDumper\Server\DumpServer;
         require 'views/classes.php';
     });
 
+    //Formulaire de contact
+    $router->map('GET','/Dico/contact',function(){
+        require 'views/contact.php';
+    });
+
     //Titre des cours par theme GET
     $router->map('GET','/Dico/classes/[*:theme]/',function($theme){
         $init = new classes();
