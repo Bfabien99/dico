@@ -54,4 +54,20 @@
                 return $result;
             }
         }
+
+        public function getQuizz(){
+            $db = $this->dbConnect();
+            $query = $db->prepare('SELECT * FROM quizz ORDER BY id ASC');
+            $query->execute();
+            $result = $query->fetchAll();
+
+            if (!$result) 
+            {
+                return false;
+            }
+            else 
+            {
+                return $result;
+            }
+        }
     }

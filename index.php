@@ -3,7 +3,7 @@
 use Symfony\Component\VarDumper\Server\DumpServer;
 
     require '../vendor/autoload.php';
-    require 'models/classes.php';
+    require 'controllers/classeController.php';
     include 'functions/dico.php';
     include 'functions/conjugation.php';
     include 'functions/cleans.php';
@@ -49,16 +49,30 @@ use Symfony\Component\VarDumper\Server\DumpServer;
 
     //Titre des cours par theme GET
     $router->map('GET','/Dico/classes/[*:theme]/',function($theme){
-        $init = new classes();
+        $init = new classeController();
         $titres = $init->getAllClasse($theme);
         require 'views/theme.php';
+    });
+
+    //Quizz en GET
+    $router->map('GET','/Dico/classes/quizz',function(){
+        $init = new classeController();
+        $quizz = $init->getQuizz();
+        require 'views/quizz.php';
+    });
+
+    $router->map('POST','/Dico/classes/quizz',function(){
+        $ans = true;
+        $init = new classeController();
+        $quizz = $init->getQuizz();
+        require 'views/quizz.php';
     });
 
     //Cours par titre GET
     $router->map('GET','/Dico/classes/[*:theme]/[*:titre]',function($theme,$titre){
         $titre = urldecoder($titre);
         $titre = str_replace("-", " ", $titre);
-        $init = new classes();
+        $init = new classeController();
         $cours = $init->getClasse($theme,$titre);
         require 'views/cours.php';
     });

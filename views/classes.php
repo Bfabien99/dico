@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="shortcut icon" href="../assets/images/logo/favicon.ico" type="image/x-icon">
-    <title>Course</title>
+    <title>Document</title>
     <style>
         body{
             width: 100%;
@@ -67,8 +67,8 @@
     <?php include 'layout/header.php';?>
     <div class="container">
         <a href="nombre/" class="button">Numbers - Les Nombres</a>
-        <a href="vocabulaire/" class="button">Vocabulary - Vocabulaire</a>
-        <a href="conjugaison/" class="button">Conjugation - Conjugaison</a>
+        <a href="grammaire/" class="button">Grammar - Grammaire</a>
+        <a href="quizz" class="button">Test</a>
     </div>
 
     <footer style="width: 100%;padding:10px;color:white;text-align:center;">
