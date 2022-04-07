@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Conjugate</title>
+    <title>Conjugaison</title>
     <style>
         body{
             width: 100%;
@@ -25,7 +25,7 @@
             align-items: center;
             padding: 5px;
             padding-bottom: 5px;
-            min-height: 95vh;
+            min-height: 70vh;
         }
 
         form{
@@ -126,11 +126,7 @@
         }
 
         footer{
-            width: 90%;
-            margin:0 auto;
-            text-align: center;
-            color: white;
-            text-shadow: 0px 0px 2px #aaa;
+            background-color: #b3aefc;
         }
 
         @media screen and (max-width:1400px) {
@@ -273,7 +269,7 @@
         <?php elseif(!empty($_GET['verb']) && empty($results['conjugated_forms'])):?>
                 <h3 style="color: white;">No match found</h3>
         <?php else:?>
-                    <h3 style="color: white;">Welcome</h3>
+                    <h3 style="color: white;">Conjugation / Conjugaison</h3>
         <?php endif;?>
     </div>
 

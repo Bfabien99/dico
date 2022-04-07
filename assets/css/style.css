@@ -108,6 +108,16 @@
         align-items: center;
     }
 
+    footer{
+        padding: 10px;
+        width: 100%;
+        margin:auto;
+        text-align: center;
+        color: white;
+        text-shadow: 0px 0px 2px #aaa;
+        background-color: #59acff;
+    }
+
     @media screen and (max-width:1370px) {
        
         .navigation{

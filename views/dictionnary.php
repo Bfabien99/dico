@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
-    <title>Dictionnary</title>
+    <title>Dictionnaire</title>
     <style>
         body{
             width: 100%;
@@ -18,7 +18,7 @@
         .container{
             width: 90%;
             min-width: 310px;
-            min-height: 95vh;
+            min-height: 70vh;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -157,12 +157,6 @@
         }
 
         footer{
-            padding: 10px;
-            width: 100%;
-            margin:auto;
-            text-align: center;
-            color: white;
-            text-shadow: 0px 0px 2px #aaa;
             background-color: #b3aefc;
         }
 
@@ -312,7 +306,7 @@
         <?php elseif(!empty($_GET['search'])):?>
             <h3>No match found</h3>
         <?php else:?>
-                <h3>Welcome</h3>
+                <h3>Dictionary / Dictionnaire</h3>
         <?php endif;?>
     </div>
 

@@ -91,5 +91,9 @@
         </div>
     <?php endif;?>
     </div>
+
+    <footer>
+        <span>&copy;2022 - projet_NAN_5.22 - BFabien99</span>
+    </footer>
 </body>
 </html>

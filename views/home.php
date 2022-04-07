@@ -11,14 +11,14 @@
         body{
             width: 100%;
             min-height: 100vh;
-            background-color: #59acff;
+            background-color: #59acff/*#59acff*/;
             font-family: Poppins;
         }
 
         .container{
             width: 90%;
             min-width: 310px;
-            min-height: 95vh;
+            min-height: 70vh;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -149,7 +149,6 @@
                 <h2>Pourquoi utilisé English's Toolbox</h2>
                 <p>English's Toolbox est gratuit, pas besoin de debourser de l'argent ou quoique ce soit pour apprendre.</p>
                 <p>Avec English's Toolbox pas besoin d'inscription pour commencer à apprendre. En accedant à la plateforme vous bénéficier de tous ce que English's Toolbox propose.</p>
-                <p>English's Toolbox est disponible sur tout type de plateforme (Mac, Pc, Mobile).</p>
             </div>
             
             <div class="bloc">
@@ -165,7 +164,6 @@
                 <h1>Cours</h1>
                 <p>Différent cours vous sont proposés.</p>
                 <p>Les cours sont classés par thème. Chaque thème dispose d'une série de leçon simple à comprendre.</p>
-                <p>Si vous débutez, nous vous recommandons de suivre les leçons par ordre de disposition afin d'apprendre pas à pas.</p>
                 <p>Si vous souhaitez réviser, choisissez juste la leçon qui vous convient.</p>
                 <h4>Bon apprentissage!</h4>
                 <a href="/Dico/classes/" class="see">Consulter</a>
@@ -197,7 +195,7 @@
             <div class="text">
                 <h1>Conjugaison</h1>
                 <p>Vous avez un soucis avec les temps en Anglais ? Vous ne savez pas comment conjuguez un verbe en Anglais ? Pas de souci.</p>
-                <p>English's Toolbox met à votre disposition un conjugueur fait maison.</p>
+                <p>English's Toolbox met à votre disposition un outil de conjugaison fait maison.</p>
                 <p>Quel verbe voulez vous conjuger ? Entrez juste ce verbe et vous English's Toolbox se charge de conjuguer votre verbe dans plus de 20 temps conjugables.</p>
                 <h3>Conjugue votre verbe dans +20 temps possibles.</h3>
                 <a href="/Dico/conjugate" class="see">Consulter</a>
@@ -208,5 +206,9 @@
         </section>
 
     </div>
+
+    <footer>
+        <span>&copy;2022 - projet_NAN_5.22 - BFabien99</span>
+    </footer>
 </body>
 </html>
