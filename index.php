@@ -2,7 +2,7 @@
 
 use Symfony\Component\VarDumper\Server\DumpServer;
 
-    require '../vendor/autoload.php';
+    require 'vendor/autoload.php';
     require 'controllers/classeController.php';
     include 'functions/dico.php';
     include 'functions/conjugation.php';
