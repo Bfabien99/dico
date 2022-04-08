@@ -1,6 +1,5 @@
 <?php
 
-use Symfony\Component\VarDumper\Server\DumpServer;
 
     require 'vendor/autoload.php';
     require 'controllers/classeController.php';
