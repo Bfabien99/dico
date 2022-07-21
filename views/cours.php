@@ -89,6 +89,8 @@
             <h1 class="titre"><?= $cours[0]->titre?></h1>
             <div class="cours"><?= nl2br($cours[0]->contenu)?></div>
         </div>
+    <?php else:?>
+        <h3>Leçon inexistante</h3>
     <?php endif;?>
     </div>
 

@@ -79,12 +79,13 @@
 <body>
     <?php include 'layout/header.php';?>
     <div class="container">
-        <h1><?= strtoupper($theme)?></h1>
-
         <?php if(!empty($titres)):?>
+            <h1><?= strtoupper($theme)?></h1>
             <?php foreach($titres as $titre):?>
                 <a href="<?=urldecoder($titre->titre)?>" class="button"><?=$titre->titre?></a>
             <?php endforeach;?>
+        <?php else:?>
+            <h3><< <?= strtoupper($theme)?> >> inconnu</h3>
         <?php endif;?>
 
             <a href="/Dico/classes/" class="back">Retour</a>
